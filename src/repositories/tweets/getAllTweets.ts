@@ -6,6 +6,9 @@ export const getAllTweets = async () => {
       include: {
         user: true,
       },
+      orderBy: {
+        id: "desc",
+      },
     });
     return allTweets;
   } catch (error) {
